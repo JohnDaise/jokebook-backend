@@ -8,12 +8,12 @@
 
 user1 = User.create(name: "Mike")
 
-joke1 = Joke.create(joke: "I was fired from the keyboard factory yesterday. I wasn't putting in enough shifts.")
-joke2 = Joke.create(joke: "Without geometry life is pointless.")
-joke3 = Joke.create(joke: "Why did the girl smear peanut butter on the road? To go with the traffic jam.")
-joke4 = Joke.create(joke: "Who is the coolest Doctor in the hospital? The hip Doctor!")
-joke5 = Joke.create(joke: "What's black and white and read all over? The newspaper.")
-joke6 = Joke.create(joke:"If you’re struggling to think of what to get someone for Christmas. Get them a fridge and watch their face light up when they open it.")
+joke1 = Joke.create(joke: "I was fired from the keyboard factory yesterday. I wasn't putting in enough shifts.", user_id: 1)
+joke2 = Joke.create(joke: "Without geometry life is pointless.", user_id: 1)
+joke3 = Joke.create(joke: "Why did the girl smear peanut butter on the road? To go with the traffic jam.", user_id: 1)
+joke4 = Joke.create(joke: "Who is the coolest Doctor in the hospital? The hip Doctor!", user_id: 1)
+joke5 = Joke.create(joke: "What's black and white and read all over? The newspaper.", user_id: 1)
+joke6 = Joke.create(joke:"If you’re struggling to think of what to get someone for Christmas. Get them a fridge and watch their face light up when they open it." , user_id: 1)
 
 
 like1 = Like.create(user_id: 1, joke_id: 1)

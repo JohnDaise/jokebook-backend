@@ -8,6 +8,19 @@ def show
   render json: find_joke
 end
 
+def update
+  @joke.update(joke_params)
+  if @joke.save
+    render json: @joke, status: :accepted
+  else
+    render json: { errors: @joke.errors.full_messages }, status: :unprocessible_entity
+  end
+end
+
+def destroy
+  render json: Joke.find(params[:id]).destroy
+end
+
 
 
 
