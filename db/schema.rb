@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2018_09_27_175941) do
 
   create_table "jokes", force: :cascade do |t|
     t.string "joke"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,6 +31,8 @@ ActiveRecord::Schema.define(version: 2018_09_27_175941) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "password"
+    t.string "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
