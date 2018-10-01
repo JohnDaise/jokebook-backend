@@ -17,20 +17,20 @@ def update
   end
 end
 
+def create
+  render json: Joke.create(joke_params)
+end
+
 def destroy
   render json: Joke.find(params[:id]).destroy
 end
 
 
 
-
-
 private
 
-
-
 def joke_params
-   params.permit(:id, :joke)
+   params.permit(:id, :joke, :user_id)
  end
 
  def find_joke
