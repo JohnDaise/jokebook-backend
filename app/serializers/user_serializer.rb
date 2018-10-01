@@ -3,5 +3,5 @@ class UserSerializer < ActiveModel::Serializer
 
   has_many :likes
   has_many :jokes
-  has_many :jokes, through: :likes
+  # has_many :jokes, through: :likes
 end
