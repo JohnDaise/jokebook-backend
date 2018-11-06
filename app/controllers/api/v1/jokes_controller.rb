@@ -1,4 +1,5 @@
 class Api::V1::JokesController < ApplicationController
+skip_before_action :authorized, only: [:index, :show]
 
 def index
   render json: Joke.all
@@ -36,8 +37,5 @@ def joke_params
  def find_joke
    @joke = Joke.find(params[:id])
  end
-
-
-
 
 end

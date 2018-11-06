@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
   before_action :authorized
+
   private
 
   def hmac_secret

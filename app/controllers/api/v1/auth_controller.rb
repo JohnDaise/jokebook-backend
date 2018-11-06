@@ -3,6 +3,7 @@ class Api::V1::AuthController < ApplicationController
 
   def create # POST /api/v1/login
     @user = User.find_by(name: user_login_params[:name])
+
     if @user && @user.authenticate(user_login_params[:password])
       # create token
       # send it
