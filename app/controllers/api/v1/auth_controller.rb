@@ -15,7 +15,7 @@ class Api::V1::AuthController < ApplicationController
         user_info: {
           name: @user.name,
           bio: @user.bio,
-          jokes: Joke.select { |x| x.user_id == 1 }
+          jokes: Joke.select { |x| x.user_id === @user.id }
           }
         }, status: :ok
       # render json: { user: UserSerializer.new(@user), jwt: token }, status: :accepted
